@@ -7,15 +7,15 @@ For my test case I'm using twitter data from US congress members as well as the 
 0. Configure environment
 
     - [x] Init git repo
-    - [ ] init remote repo
-    - [ ] set up virtual env
+    - [ ] Init remote repo
+    - [ ] Set up virtual env
     - [x] Create README.md
     
 
 1. Get list of all congess members
     - [x] Get keys and access tokens
     - [x] Put keys/tokens in a file
-    - [ ] pull cspan list: https://twitter.com/cspan/lists/members-of-congress/members?lang=en
+    - [ ] Pull cspan list: https://twitter.com/cspan/lists/members-of-congress/members?lang=en
 
 
 2. scrape meta data for congress members
