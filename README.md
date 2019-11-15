@@ -54,17 +54,17 @@ For my test case I'm using twitter data from US congress members as well as the 
 
 ## Sources:
 ### Data:
-Congressional meta data: https://github.com/unitedstates/congress-legislators
-CSPAN list of congress memebers on twitter: https://twitter.com/cspan/lists/members-of-congress/members?lang=en
-Russian troll tweets: https://github.com/fivethirtyeight/russian-troll-tweets
+- Congressional meta data: https://github.com/unitedstates/congress-legislators
+- CSPAN list of congress memebers on twitter: https://twitter.com/cspan/lists/members-of-congress/members?lang=en
+- Russian troll tweets: https://github.com/fivethirtyeight/russian-troll-tweets
 
 ### Packages:
-Speed reader package: https://github.com/matthewjdenny/SpeedReader
+- Speed reader package: https://github.com/matthewjdenny/SpeedReader
 
 ### Lit:
-Fightin words: https://www.cambridge.org/core/services/aop-cambridge-core/content/view/81B3703230D21620B81EB6E2266C7A66/S1047198700002291a.pdf/div-class-title-fightinandapos-words-lexical-feature-selection-and-evaluation-for-identifying-the-content-of-political-conflict-div.pdf
-word2vec: https://code.google.com/archive/p/word2vec/
-word2vec explained: https://arxiv.org/pdf/1402.3722.pdf
-Diachronic word embeddings: https://arxiv.org/pdf/1605.09096.pdf
-Words are Malleable: https://arxiv.org/pdf/1711.05603.pdf
+- Fightin words: https://www.cambridge.org/core/services/aop-cambridge-core/content/view/81B3703230D21620B81EB6E2266C7A66/S1047198700002291a.pdf/div-class-title-fightinandapos-words-lexical-feature-selection-and-evaluation-for-identifying-the-content-of-political-conflict-div.pdf
+- word2vec: https://code.google.com/archive/p/word2vec/
+- word2vec explained: https://arxiv.org/pdf/1402.3722.pdf
+- Diachronic word embeddings: https://arxiv.org/pdf/1605.09096.pdf
+- Words are Malleable: https://arxiv.org/pdf/1711.05603.pdf
 
