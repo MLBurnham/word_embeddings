@@ -43,6 +43,7 @@ For my test case I'm using twitter data from US congress members as well as the 
     - [x] Merge meta data with text data
     - [x] Convert date strings to datetime and subset to date range
     - [ ] Examine lemmas for key political words
+    - [ ] Replace words via regular expressions where appropriate
     - [ ] Recode PrepDocs class
     
 6. Get list of key words
