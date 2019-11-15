@@ -40,7 +40,7 @@ For my test case I'm using twitter data from US congress members as well as the 
     - [ ] Automate daily pull
 
 5. Clean twitter data
-    - [ ] Merge meta data with text data
+    - [x] Merge meta data with text data
     - [x] Convert date strings to datetime and subset to date range
     - [ ] Examine lemmas for key political words
     - [ ] Recode PrepDocs class
