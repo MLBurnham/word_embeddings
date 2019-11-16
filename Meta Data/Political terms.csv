@@ -1,33 +1,31 @@
-trump,
+Key Word,Alternatives
+trump,"donald trump, president trump"
 president,
-potus,synonym
-healthcare,
+healthcare,"health care, "
 border,
 wall,
-democrat,
-republican,
-liberal,
-conservative,
-abortion/abort,
-clinton,questionable
-sanders,
+democrat,dems
+republican,gop
+liberal,"left wing, leftist"
+conservative,right wing
+abortion,abort
+clinton,
+sanders,"bernie sanders, bernie"
 socialist,
-economy,
+economy,"econ, economics"
 jobs,
-impeachment,
-obama,
+impeach,impeachment
+obama,barack obama
 russia,
-mueller,
+mueller,robert mueller
 collusion,
-military,
+military,"armed forces, armed services"
 budget,
 market,
 trade,
 vote,
 democracy,
-gun,
-firearm,synonym
-assualt rifle,synonym
+gun,"firearm, assault rifle"
 agriculture,
 women,
 business,
@@ -36,65 +34,67 @@ medicare,
 police,
 immigration,
 insurance,
-climate,
-corrupt,
-progressive,
-electoral college,
-judge,
+climatechange,"climate change, global warming"
+corrupt,"corruption, corrupted"
+electoralcollege,electoral college
+judge,court justice
 court,
 gerrymander,
-pelosi,
-mcconnell,
-pence,
+pelosi,nancy pelosi
+mcconnell,mitch mcconnell
+mikepence,"mike pence, pence, vice president pence, vice president mike pence"
 citizens united,
+daca,deferred action for childhood arrivals
 dreamers,
-lgbtq,
-obamacare,change to ACA
-scotus,
+lgbtq,lgbt
+ACA,affordable care act
+scotus,"supreme court, supreme court of the united states, us supreme court, united states supreme court"
 partisan,
 patriot,
 welfare,
 privilege,
 minority,
+islam,islamic
 muslim,
+christian,christianity
 god,
 religion,
 administration,
-politics,
-just,stopword?
+politics,political
 fair,
-witch hunt,
-warren,
+witchhunt,witch hunt
+warren,elizabeth warren
 biden,
 security,
-terrorism,
+terrorism,"counterterrorism, counter-terrorism"
+defense,
 pentagon,
-senate,
-rich,
+homelandsecurity,homeland security
+senate,"us senate, united states senate, senatorial"
+wealthy,"rich, wealth, billionaire"
 american,
-church,
+church,temple
 science,
-supreme court,synonym
-stock,vague?
-congress,
-white house,
+stockmarket,"stock market, stocks"
+congress,congressional
+whitehouse,
 constitution,
 federal,
 syria,
-north korea,
-saudi arabia,
-gop,
-mexico,
+northkorea,"North korean, north korea"
+saudiarabia,"Saudi arabia, saudi, saudi arabian"
+mexico,mexican
 debt,
 fiscal,
 oil,
 media,
+cnn,cable news network
+fox,fox news
 news,
 racist,
 refugee,
 education,
-maga,
-mitch,synonym
+maga,make america great again
 campaign,
 party,
 poll,
