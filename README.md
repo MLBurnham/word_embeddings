@@ -6,7 +6,7 @@ For my test case I'm using twitter data from US congress members as well as the 
 0. Configure environment
 
     - [x] Init git repo
-    - [ ] Init remote repo
+    - [x] Init remote repo
     - [ ] Set up virtual env
     - [x] Create README.md
     - [ ] Ensure reproducability of scripts
@@ -42,16 +42,35 @@ For my test case I'm using twitter data from US congress members as well as the 
 5. Clean twitter data
     - [x] Merge meta data with text data
     - [x] Convert date strings to datetime and subset to date range
-    - [ ] Examine lemmas for key political words
-    - [ ] Remove hashtags
-    - [ ] Replace words via regular expressions where appropriate
+    - [x] Examine lemmas for key political words
+    - [x] Remove hashtags
+    - [x] Remove websites from text
+    - [x] Replace words via regular expressions where appropriate
+    - [x] Redefine stopwords
+    - [ ] Figure out how to handle emoji
+    - [ ] Tag key words based on ideology affiliation
     - [ ] Recode PrepDocs class
     
 6. Get list of key words
     - [x] Create initial list of 100
-    - [ ] Revise list based on lemmas
+    - [x] Revise list based on lemmas
+    - [x] Define a dictionary of synonyms for key words
 
-7. Get troll data
+7. Construct word embeddings
+    - [ ] Automate process so I can loop through embeddings for each key word
+    - [ ] Find platform to save embeddings on
+    - [ ] Congressional word embeddings
+    - [ ] Troll word embeddings
+
+8. Clean troll data
+    - [ ] Download data
+    - [ ] Clean with same process as congressional data
+
+9. Explore results
+    - [ ] Calculate euclidian distance on key terms
+    - [ ] Visualize distance via PCA or SVD
+
+10. Test fightnin words process
 
 
 ## Sources:
