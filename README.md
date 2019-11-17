@@ -47,8 +47,8 @@ For my test case I'm using twitter data from US congress members as well as the 
     - [x] Remove websites from text
     - [x] Replace words via regular expressions where appropriate
     - [x] Redefine stopwords
-    - [ ] Figure out how to handle emoji
-    - [ ] Tag key words based on ideology affiliation
+    - [x] Figure out how to handle emoji
+    - [x] Tag key words based on ideology affiliation
     - [ ] Recode PrepDocs class
     
 6. Get list of key words
