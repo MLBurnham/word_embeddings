@@ -49,12 +49,15 @@ For my test case I'm using twitter data from US congress members as well as the 
     - [x] Redefine stopwords
     - [x] Figure out how to handle emoji
     - [x] Tag key words based on ideology affiliation
+    - [x] Remove @
+    - [ ] Remove single letters
     - [ ] Recode PrepDocs class
     
 6. Get list of key words
     - [x] Create initial list of 100
     - [x] Revise list based on lemmas
     - [x] Define a dictionary of synonyms for key words
+    - [ ] Add twitter handles for names in synonym list
 
 7. Construct word embeddings
     - [ ] Automate process so I can loop through embeddings for each key word
