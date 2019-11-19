@@ -4,7 +4,7 @@
 from __future__ import unicode_literals
 
 # Stop words
-STOP_WORDS = set(
+stop_words = set(
     """
 a about after afterwards again all almost
 already also although always am among amongst amount an and another any anyhow
@@ -68,12 +68,13 @@ yet you your yours yourself yourselves
 )
 
 contractions = ["n't", "'d", "'ll", "'m", "'re", "'s", "'ve"]
-STOP_WORDS.update(contractions)
+stop_words.update(contractions)
 
 for apostrophe in ["‘", "’"]:
     for stopword in contractions:
-        STOP_WORDS.add(stopword.replace("'", apostrophe))
+        stop_words.add(stopword.replace("'", apostrophe))
 
-f = open("Meta Data/stop_words.pkl","wb")
-pickle.dump(STOP_WORDS,f)
-f.close()
+#import pickle
+#f = open("stop_words.pkl","wb")
+#pickle.dump(stop_words,f)
+#f.close()

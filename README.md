@@ -21,7 +21,8 @@ For my test case I'm using twitter data from US congress members as well as the 
 2. scrape meta data for congress members
 
     - [x] Fields: screen name, user id, about, 
-    - [x] mandually add: party, gender, district
+    - [x] Manually add: party, gender, district
+    - [ ] Convert meta data notebook to .py script
 
 3. Create listener to stream data
     - [x] Filter for original tweets

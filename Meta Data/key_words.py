@@ -1,5 +1,3 @@
-import pickle
-
 key_words = [
     'trump',
     'president',
@@ -101,10 +99,6 @@ key_words = [
     'party',
     'poll']
 
-f = open("Meta Data/key_words.pkl", "wb")
-pickle.dump(key_words, f)
-f.close()
-
 key_synonyms = {
     'realdonaldtrump': 'trump',
     'realdonald trump': 'trump',
@@ -184,6 +178,11 @@ key_synonyms = {
     'make america great again': 'maga'
 }
 
-f = open("Meta Data/synonym_dictionary.pkl","wb")
-pickle.dump(key_synonyms,f)
-f.close()
+#import pickle
+#f = open("key_words.pkl", "wb")
+#pickle.dump(key_words, f)
+#f.close()
+
+#f = open("synonym_dictionary.pkl","wb")
+#pickle.dump(key_synonyms,f)
+#f.close()
