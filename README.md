@@ -27,7 +27,7 @@ For my test case I'm using twitter data from US congress members as well as the 
     - [x] Filter for original tweets
     - [x] Test and execute
     - [ ] Stream data to csv
-    - [ ] Clean up encoding/emoji
+    - [x] Clean up encoding/emoji
 
 4. Create script to request from REST API
     - [x] function to pull the data. Pull max 200 tweets or pull from most recent.
@@ -51,7 +51,7 @@ For my test case I'm using twitter data from US congress members as well as the 
     - [x] Tag key words based on ideology affiliation
     - [x] Remove @
     - [ ] Remove single letters
-    - [ ] Recode PrepDocs class
+    - [x] Recode PrepDocs class
     
 6. Get list of key words
     - [x] Create initial list of 100
