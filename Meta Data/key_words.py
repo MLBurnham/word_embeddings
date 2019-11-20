@@ -119,6 +119,8 @@ key_synonyms = {
     'bernie': 'sanders',
     ' econ ': ' economy ',
     'economics': 'economy',
+    'impeachment hearings': 'impeach',
+    'impeachment hearing': 'impeach',
     'impeachment': 'impeach',
     'barack obama': 'obama',
     'robert mueller': 'mueller',
