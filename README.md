@@ -70,6 +70,7 @@ For my test case I'm using twitter data from US congress members as well as the 
     - [ ] Find platform to save embeddings on
     - [ ] Congressional word embeddings
     - [ ] Troll word embeddings
+    - [ ] test skipgram vs cbow
 
 8. Clean troll data
     - [ ] Download data
