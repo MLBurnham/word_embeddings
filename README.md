@@ -63,9 +63,9 @@ For my test case I'm using twitter data from US congress members as well as the 
 7. Construct word embeddings
     - [x] Initial word embedding test on 1-2 words
     - [x] Add randomized labels for embeddings
-    - [ ] Create pca to df function
+    - [x] PCA and create pca to df function
     - [x] Create plot for pca
-    - [ ] Test run on 'trump' and 'impeach'
+    - [x] Test run on 'trump' and 'impeach'
     - [ ] Automate process so I can loop through embeddings for each key word
     - [ ] Find platform to save embeddings on
     - [ ] Congressional word embeddings

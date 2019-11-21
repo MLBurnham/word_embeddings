@@ -111,6 +111,6 @@ class TextPrep:
 
         text_lemmas = []
         for text in nlp.pipe(text_list, n_threads = threads):
-            tokens = [token.lemma_.lower().strip() for token in text if not token.is_stop) > 1]
+            tokens = [token.lemma_.lower().strip() for token in text if not token.is_stop]
             text_lemmas.append(tokens)
         return text_lemmas
