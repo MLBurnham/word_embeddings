@@ -58,6 +58,7 @@ For my test case I'm using twitter data from US congress members as well as the 
     - [x] Create initial list of 100
     - [x] Revise list based on lemmas
     - [x] Define a dictionary of synonyms for key words
+    - [ ] Create list of words where I expect no ideological difference
     - [ ] Add twitter handles for names in synonym list
 
 7. Construct word embeddings
@@ -70,7 +71,7 @@ For my test case I'm using twitter data from US congress members as well as the 
     - [ ] Find platform to save embeddings on
     - [ ] Congressional word embeddings
     - [ ] Troll word embeddings
-    - [ ] test skipgram vs cbow
+    - [x] test skipgram vs cbow
 
 8. Clean troll data
     - [ ] Download data
