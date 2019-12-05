@@ -51,7 +51,7 @@ For my test case I'm using twitter data from US congress members as well as the 
     - [x] Figure out how to handle emoji
     - [x] Tag key words based on ideology affiliation
     - [x] Remove @
-    - [ ] Remove single letters
+    - [x] Remove single letters
     - [x] Recode PrepDocs class
     
 6. Get list of key words
@@ -60,6 +60,8 @@ For my test case I'm using twitter data from US congress members as well as the 
     - [x] Define a dictionary of synonyms for key words
     - [ ] Create list of words where I expect no ideological difference
     - [ ] Add twitter handles for names in synonym list
+    - [ ] Cull list of key words to about 50 
+    - [ ] Test lemmatizer on base words
 
 7. Construct word embeddings
     - [x] Initial word embedding test on 1-2 words
@@ -78,8 +80,10 @@ For my test case I'm using twitter data from US congress members as well as the 
     - [ ] Clean with same process as congressional data
 
 9. Explore results
-    - [ ] Calculate euclidian distance on key terms
-    - [ ] Visualize distance via PCA or SVD
+    - [x] Calculate cosine similarity on key terms
+    - [x] Visualize distance via PCA or SVD
+    - [ ] Descriptive statistics and plots of dataset and analysis
+    - [ ] Implement permutation testing
 
 10. Test fightnin words process
 

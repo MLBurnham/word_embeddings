@@ -97,7 +97,50 @@ key_words = [
     'maga',
     'campaign',
     'party',
-    'poll']
+    'poll'
+]
+
+key_words_small = [
+    'abortion', 'administration',
+
+    'border', 'biden',
+
+    'conservative', 'collusion', 'clinton', 'campaignfinance', 'corrupt', 'court', 'climatechange', 'cnn',
+
+    'democrat', 'daca',
+
+    'economy', 'electoralcollege', 'education',
+    
+    'fox',
+
+    'gun', 'god', 'gerrymander',
+
+    'healthcare',
+    
+    'impeach', 'immigration', 'insurance',
+
+    'liberal',
+    
+    'mueller', 'mikepence', 'mcconnell', 'mexico', 'media'
+    
+    'news',
+
+    'obama', 'oil',
+
+    'president', 'pelosi', 'police'
+
+    'republican', 'russia', 'religion', 'racist', 'refugee',
+
+    'sanders', 'socialist', 'scotus',
+
+    'tax', 'trump',
+
+    'usmca',
+
+    'wall', 'wealth',
+    
+    'welfare', 'warren', 'whitehouse',
+]
 
 key_synonyms = {
     'realdonaldtrump': 'trump',
@@ -122,6 +165,8 @@ key_synonyms = {
     'impeachment hearings': 'impeach',
     'impeachment hearing': 'impeach',
     'impeachment': 'impeach',
+    'president obama': 'obama',
+    'prsident barack obama': 'obama'
     'barack obama': 'obama',
     'robert mueller': 'mueller',
     'armed forces': 'military',
@@ -135,12 +180,22 @@ key_synonyms = {
     'electoral college': 'electoralcollege',
     'court justice': 'judge',
     'nancy pelosi': 'pelosi',
+    'speakerpelosi': 'pelosi',
+    'speaker pelosi': 'pelosi',
+    'speaker of the house pelosi': 'pelosi',
+    'house speaker': 'pelosi',
+    'senatemajldr': 'mcconnell',
+    'senate majority leader mitch mcconnell': 'mcconnell',
+    'senate majority leader mcconnell': 'mcconnell',
+    'majority leader mitch mcconnell': 'mcconnell',
+    'majority leader mcconnell': 'mcconnell',
     'mitch mcconnell': 'mcconnell',
     'vice president mike pence': 'mikepence',
     'vice president pence': 'mikepence',
     'mike pence': 'mikepence',
     ' pence ': ' mikepence ',
-    'citizens united': 'citizensunited',
+    'citizens united': 'campaignfinance',
+    'campaign finance': 'campaignfinance',
     'deferred action for childhood arrivals': 'daca',
     'lgbt': 'lgbtq',
     'affordable care act': 'aca',
@@ -154,7 +209,10 @@ key_synonyms = {
     'christianity': ' christian',
     'political': 'politics',
     'witch hunt': 'witchhunt',
+    'senator elizabeth warren': 'warren',
+    'senator warren': 'warren',
     'elizabeth warren': 'warren',
+    'ewarren': 'warren',
     'counterterrorism': 'terrorism',
     'counter-terrorism': 'terrorism',
     'homeland security': 'homelandsecurity',
@@ -178,6 +236,96 @@ key_synonyms = {
     'fox news': 'fox',
     'cable news network': 'cnn',
     'make america great again': 'maga'
+    'fossil fuels': 'oil',
+    'fossil fuel': 'oil',
+    'united states mexicocanada agreement': 'usmca'
+}
+
+base_words = [
+    'answer', 'annual', 'able',
+    
+    'bring', 
+
+    'cancer', 'come', 'chance'
+    
+    ' day ',
+    
+    'entire',
+
+    'far', 'find',
+
+    'go','get',
+    
+    'hear', 'help', 'have', 'host', 'hold',
+
+    ' join ', 
+
+    'look', 'long', 'like', 'live',
+    
+    'month', 'matter', 'member', 'morning', 'meet',
+    
+    'night', 'near,
+    
+    'opportunity', 'open',
+    
+    'plan', 'place', 'phone',
+
+    'read', 'receive', 'recent',
+    
+    'sure', 'send', 'say', 'share', 'small', 'staff', 'shut'
+
+    'thanksgiving', ' thank ', 'think', 'take', 'today', 'talk',
+
+    'weekend', ' week ',
+    
+    'yesterday'
+]
+
+base_synonyms{
+    'answers': 'answer'
+    'yearly': 'annual'
+    'cancerous':'cancer'
+    'came':'come'
+    'whole': 'entire'
+    'distant': 'far'
+    'locate':'find'
+    'heard' : 'hear'
+    'helped': 'help'
+    'had': 'have'
+    'hosting':'host'
+    'hosted':'host'
+    'joint': 'join'
+    'gaze' :'look'
+    'glance' : 'look'
+    'lengthy': 'long'
+    'protracted': 'long'
+    'met': 'meet'
+    'greet': 'meet'
+    'midnight': 'night'
+    'nearly': 'near'
+    'nearby': 'near'
+    'ajar': 'open'
+    'location': 'place'
+    'telephone': 'phone'
+    'cellphone': 'phone'
+    'positive': 'sure'
+    'sent': 'send'
+    'said': 'say'
+    'tiny': 'small'
+    'microscopic': 'small'
+    'little': 'small'
+    'miniture': 'small'
+    'mini': 'small',
+    'thanks giving': 'thanksgiving'
+    'grateful': 'thank'
+    'thanks': 'thank'
+    'gratitude': 'thank'
+    'thankyou': 'thank'
+    'thank you': 'thank'
+    'thank-you': 'thank'
+    'thought': 'think'
+    'took': 'take'
+    'speak': 'talk'
 }
 
 #import pickle
