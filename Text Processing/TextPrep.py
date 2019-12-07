@@ -68,8 +68,9 @@ class TextPrep:
         a specific group. Pass a list of text documents, and a list of associated tags for those documents
         such as two columns from a data frame.
         """
-        # replace synonyms of the key words with the key word
-        text = self.replace_synonyms(keyword, text)
+        # if there are synonyms, replace synonyms of the key words with the key word
+        if keyword in self.key_synonyms:
+            text = self.replace_synonyms(keyword, text)
         # isolate the key word with space so it can be treated as an individual token
         text = re.sub(keyword, ' ' + keyword + ' ', text)
         # Add the group label
