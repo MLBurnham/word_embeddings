@@ -166,7 +166,7 @@ key_synonyms = {
     'impeachment hearing': 'impeach',
     'impeachment': 'impeach',
     'president obama': 'obama',
-    'prsident barack obama': 'obama'
+    'prsident barack obama': 'obama',
     'barack obama': 'obama',
     'robert mueller': 'mueller',
     'armed forces': 'military',
@@ -235,7 +235,7 @@ key_synonyms = {
     'mexican': 'mexico',
     'fox news': 'fox',
     'cable news network': 'cnn',
-    'make america great again': 'maga'
+    'make america great again': 'maga',
     'fossil fuels': 'oil',
     'fossil fuel': 'oil',
     'united states mexicocanada agreement': 'usmca'
@@ -256,7 +256,7 @@ base_words = [
 
     'go','get',
     
-    'hear', 'help', 'have', 'host', 'hold',
+    'hear', 'help', 'host', 'hold',
 
     ' join ', 
 
@@ -264,7 +264,7 @@ base_words = [
     
     'month', 'matter', 'member', 'morning', 'meet',
     
-    'night', 'near,
+    'night', 'near',
     
     'opportunity', 'open',
     
@@ -272,7 +272,7 @@ base_words = [
 
     'read', 'receive', 'recent',
     
-    'sure', 'send', 'say', 'share', 'small', 'staff', 'shut'
+    'sure', 'send', 'share', 'small', 'staff', 'shut'
 
     'thanksgiving', ' thank ', 'think', 'take', 'today', 'talk',
 
@@ -281,50 +281,51 @@ base_words = [
     'yesterday'
 ]
 
-base_synonyms{
-    'answers': 'answer'
-    'yearly': 'annual'
-    'cancerous':'cancer'
-    'came':'come'
-    'whole': 'entire'
-    'distant': 'far'
-    'locate':'find'
-    'heard' : 'hear'
-    'helped': 'help'
-    'had': 'have'
-    'hosting':'host'
-    'hosted':'host'
-    'joint': 'join'
-    'gaze' :'look'
-    'glance' : 'look'
-    'lengthy': 'long'
-    'protracted': 'long'
-    'met': 'meet'
-    'greet': 'meet'
-    'midnight': 'night'
-    'nearly': 'near'
-    'nearby': 'near'
-    'ajar': 'open'
-    'location': 'place'
-    'telephone': 'phone'
-    'cellphone': 'phone'
-    'positive': 'sure'
-    'sent': 'send'
-    'said': 'say'
-    'tiny': 'small'
-    'microscopic': 'small'
-    'little': 'small'
-    'miniture': 'small'
+base_synonyms = {
+    'answers': 'answer',
+    'yearly': 'annual',
+    'cancerous':'cancer',
+    'came':'come',
+    'whole': 'entire',
+    'distant': 'far',
+    'locate':'find',
+    'heard' : 'hear',
+    'helped': 'help',
+    'had': 'have',
+    'has': 'have',
+    'hosting':'host',
+    'hosted':'host',
+    'joint': 'join',
+    'gaze' :'look',
+    'glance' : 'look',
+    'lengthy': 'long',
+    'protracted': 'long',
+    'met': 'meet',
+    'greet': 'meet',
+    'midnight': 'night',
+    'nearly': 'near',
+    'nearby': 'near',
+    'ajar': 'open',
+    'location': 'place',
+    'telephone': 'phone',
+    'cellphone': 'phone',
+    'positive': 'sure',
+    'sent': 'send',
+    'said': 'say',
+    'tiny': 'small',
+    'microscopic': 'small',
+    'little': 'small',
+    'miniture': 'small',
     'mini': 'small',
-    'thanks giving': 'thanksgiving'
-    'grateful': 'thank'
-    'thanks': 'thank'
-    'gratitude': 'thank'
-    'thankyou': 'thank'
-    'thank you': 'thank'
-    'thank-you': 'thank'
-    'thought': 'think'
-    'took': 'take'
+    'thanks giving': 'thanksgiving',
+    'grateful': 'thank',
+    'thanks': 'thank',
+    'gratitude': 'thank',
+    'thankyou': 'thank',
+    'thank you': 'thank',
+    'thank-you': 'thank',
+    'thought': 'think',
+    'took': 'take',
     'speak': 'talk'
 }
 

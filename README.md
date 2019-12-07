@@ -58,10 +58,11 @@ For my test case I'm using twitter data from US congress members as well as the 
     - [x] Create initial list of 100
     - [x] Revise list based on lemmas
     - [x] Define a dictionary of synonyms for key words
-    - [ ] Create list of words where I expect no ideological difference
-    - [ ] Add twitter handles for names in synonym list
-    - [ ] Cull list of key words to about 50 
+    - [x] Create list of words where I expect no ideological difference
+    - [x] Add twitter handles for names in synonym list
+    - [x] Cull list of key words to about 50 
     - [ ] Test lemmatizer on base words
+    - [x] Make sure base words aren't in stop words list
 
 7. Construct word embeddings
     - [x] Initial word embedding test on 1-2 words
@@ -82,7 +83,7 @@ For my test case I'm using twitter data from US congress members as well as the 
 9. Explore results
     - [x] Calculate cosine similarity on key terms
     - [x] Visualize distance via PCA or SVD
-    - [ ] Descriptive statistics and plots of dataset and analysis
+    - [ ] Descriptive statistics and plots of dataset and analysis. bar char, dumbbell plot, 3d scatter
     - [ ] Implement permutation testing
 
 10. Test fightnin words process

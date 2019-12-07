@@ -23,11 +23,11 @@ everyone everything everywhere except
 f few fifteen fifty first five for former formerly forty four from front full
 further
 
-g get go
+g
 
 h had has have he hence her here hereafter hereby herein hereupon hers herself
 him himself his how however hundred
-stopwords
+
 i if in indeed into is it its itself
 
 j
