@@ -121,13 +121,13 @@ key_words_small = [
 
     'liberal',
     
-    'mueller', 'mikepence', 'mcconnell', 'mexico', 'media'
+    'mueller', 'mikepence', 'mcconnell', 'mexico', 'media',
     
     'news',
 
     'obama', 'oil',
 
-    'president', 'pelosi', 'police'
+    'president', 'pelosi', 'police',
 
     'republican', 'russia', 'religion', 'racist', 'refugee',
 
@@ -238,7 +238,8 @@ key_synonyms = {
     'make america great again': 'maga',
     'fossil fuels': 'oil',
     'fossil fuel': 'oil',
-    'united states mexicocanada agreement': 'usmca'
+    'united states mexicocanada agreement': 'usmca',
+    'collude': 'collusion'
 }
 
 base_words = [
@@ -246,7 +247,7 @@ base_words = [
     
     'bring', 
 
-    'cancer', 'come', 'chance'
+    'cancer', 'come', 'chance',
     
     ' day ',
     
@@ -272,7 +273,7 @@ base_words = [
 
     'read', 'receive', 'recent',
     
-    'sure', 'send', 'share', 'small', 'staff', 'shut'
+    'sure', 'send', 'share', 'small', 'staff', 'shut',
 
     'thanksgiving', ' thank ', 'think', 'take', 'today', 'talk',
 
