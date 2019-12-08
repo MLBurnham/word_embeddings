@@ -103,17 +103,15 @@ key_words = [
 key_words_small = [
     'abortion', 'administration',
 
-    'border', 'biden',
+    'border',
 
-    'conservative', 'collusion', 'clinton', 'campaignfinance', 'corrupt', 'court', 'climatechange', 'cnn',
+    'conservative', 'corrupt', 'climatechange',
 
     'democrat', 'daca',
 
-    'economy', 'electoralcollege', 'education',
-    
-    'fox',
+    'economy',
 
-    'gun', 'god', 'gerrymander',
+    'gun',
 
     'healthcare',
     
@@ -121,25 +119,21 @@ key_words_small = [
 
     'liberal',
     
-    'mueller', 'mikepence', 'mcconnell', 'mexico', 'media',
-    
-    'news',
+    'mcconnell',
 
-    'obama', 'oil',
+    'oil',
 
     'president', 'pelosi', 'police',
 
-    'republican', 'russia', 'religion', 'racist', 'refugee',
+    'republican', 'russia',
 
-    'sanders', 'socialist', 'scotus',
+    'scotus',
 
     'tax', 'trump',
 
     'usmca',
 
-    'wall', 'wealth',
-    
-    'welfare', 'warren', 'whitehouse',
+    'wall', 'wealth', 'welfare', 'whitehouse',
 ]
 
 key_synonyms = {
@@ -249,7 +243,7 @@ base_words = [
 
     'cancer', 'come', 'chance',
     
-    ' day ',
+    'day',
     
     'entire',
 
@@ -259,9 +253,9 @@ base_words = [
     
     'hear', 'help', 'host', 'hold',
 
-    ' join ', 
+    'join', 
 
-    'look', 'long', 'like', 'live',
+    'look', 'long', 'live',
     
     'month', 'matter', 'member', 'morning', 'meet',
     
@@ -275,9 +269,9 @@ base_words = [
     
     'sure', 'send', 'share', 'small', 'staff', 'shut',
 
-    'thanksgiving', ' thank ', 'think', 'take', 'today', 'talk',
+    'thanksgiving', 'thank', 'think', 'take', 'today', 'talk',
 
-    'weekend', ' week ',
+    'weekend', 'week',
     
     'yesterday'
 ]
