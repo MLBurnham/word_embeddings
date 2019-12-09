@@ -111,7 +111,7 @@ class TextPrep:
         nlp = spacy.load(self.model, disable = ['parser', 'ner', 'textcat'])
 
         text_lemmas = []
-        for text in nlp.pipe(text_list, n_threads = threads):
+        for text in nlp.pipe(text_list, n_process = threads):
             tokens = [token.lemma_.lower().strip() for token in text if not token.is_stop]
             text_lemmas.append(tokens)
         return text_lemmas
