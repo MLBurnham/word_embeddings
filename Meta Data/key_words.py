@@ -233,7 +233,10 @@ key_synonyms = {
     'fossil fuels': 'oil',
     'fossil fuel': 'oil',
     'united states mexicocanada agreement': 'usmca',
-    'collude': 'collusion'
+    'collude': 'collusion',
+    'cops': 'police',
+    'law enforcement': 'police',
+    
 }
 
 base_words = [
@@ -252,6 +255,8 @@ base_words = [
     'go','get',
     
     'hear', 'help', 'host', 'hold',
+    
+    'infrastructure',
 
     'join', 
 
@@ -270,6 +275,8 @@ base_words = [
     'sure', 'send', 'share', 'small', 'staff', 'shut',
 
     'thanksgiving', 'thank', 'think', 'take', 'today', 'talk',
+    
+    'veteran',
 
     'weekend', 'week',
     
@@ -279,7 +286,6 @@ base_words = [
 base_synonyms = {
     'answers': 'answer',
     'yearly': 'annual',
-    'cancerous':'cancer',
     'came':'come',
     'whole': 'entire',
     'distant': 'far',
@@ -322,6 +328,39 @@ base_synonyms = {
     'thought': 'think',
     'took': 'take',
     'speak': 'talk'
+}
+
+agree_words = [
+    'cancer',
+    
+    'education',
+    
+    'infrastructure', 'isis',
+    
+    'kurd',
+    
+    'service',
+    
+    'terrorism',
+    
+    'veteran',
+]
+
+agree_synonyms = {
+    'cencerous': 'cancer',
+    'tumor': 'cancer',
+    
+    'islamic state of iraq and the levant': 'isis',
+    'islamic state': 'isis',
+    
+    'kurds': 'kurd',
+    'kurdish': 'kurd',
+    
+    'terror attack': 'terrorism',
+    'terrorist': 'terrorism',
+    
+    'vets': 'veteran',
+    'vet': 'veteran'
 }
 
 #import pickle
