@@ -159,6 +159,7 @@ key_synonyms = {
     'impeachment hearings': 'impeach',
     'impeachment hearing': 'impeach',
     'impeachment': 'impeach',
+    'impeaching': 'impeach',
     'president obama': 'obama',
     'prsident barack obama': 'obama',
     'barack obama': 'obama',

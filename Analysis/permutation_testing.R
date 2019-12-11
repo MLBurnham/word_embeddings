@@ -12,7 +12,7 @@ agreesim$label <- 'Agree'
 basesim$label <- 'Base'
 keysim$label <- 'Disagree'
 cosim <- bind_rows(keysim, agreesim, basesim)
-
+  
 ## t-tests
 t.test(keysim$similarity, basesim$similarity)
 t.test(keysim$similarity, agreesim$similarity)
@@ -29,6 +29,22 @@ permTS(keybase$similarity ~ keybase$label, alternative = 'two.sided', method = '
 # disagree words with agree words
 agreeboot <- two.boot(keysim$similarity, agreesim$similarity, mean, 1000, na.rm = TRUE)
 boot.ci(agreeboot, type = 'perc')
+mean(abs(agreeboot$t) > abs(agreeboot$t0))
 # disagree words with base words
 baseboot <- two.boot(keysim$similarity, basesim$similarity, mean, 1000, na.rm = TRUE)
 boot.ci(baseboot, type = 'perc')
+mean(abs(baseboot$t) > abs(baseboot$t0))
+
+# descriptive stats
+mean(agreesim$similarity)
+mean(keysim$similarity)
+mean(basesim$similarity)
+min(basesim$similarity)
+min(agreesim$similarity)
+min(keysim$similarity)
+max(keysim$similarity)
+max(agreesim$similarity)
+max(basesim$similarity)
+length(keysim$similarity)
+length(agreesim$similarity)
+length(basesim$similarity)

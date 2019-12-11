@@ -11,6 +11,7 @@ keysim <- read.csv('Analysis/keyword_similarity.csv')
 basesim <- read.csv('Analysis/baseword_similarity.csv')
 agreesim <- read.csv('Analysis/agreeword_similarity.csv')
 tweets <- left_join(text, meta, by = 'user_id')
+perm <- read.csv('Analysis/permutation.csv')
 rm(text, meta)
 
 # subset and reformat tweets
@@ -29,17 +30,7 @@ ggplot(data=ggtweets, aes(x=party, y=n, fill=party)) +
   scale_fill_manual(values = c("#0072B2", "#D55E00")) +
   labs(title = "Tweets by Party", x = "Party", y = 'Tweets', fill = 'Party')+
   geom_text(aes(label=n), vjust=-.3, color="black", size=4.5)+
-  theme_classic() +
-  theme(plot.title = element_text(hjust = 0.5))
-  
-# histogram for permutation tests
-ggplot(mpg, aes(displ)) + scale_fill_brewer(palette = "Spectral") + 
-  geom_histogram(aes(fill=class), 
-                   binwidth = .1, 
-                   col="black", 
-                   size=.1) +  # change binwidth
-  labs(title="Histogram with Auto Binning", 
-       subtitle="")  
+  theme_classic()
 
 # Density plot for t-test
 ggplot(data = cosim, aes(similarity)) + geom_density(aes(fill=factor(label)), alpha=0.8) + 
@@ -66,4 +57,14 @@ box + geom_boxplot() +
        subtitle="Cosine Similarity by Word Category",
        x="Word Category",
        y="Cosine Similarity") +
+  theme_bw()
+
+# histogram
+
+ggplot(perm, aes(x=cosine.similarity)) + 
+  geom_histogram(fill = '#0072B2') +
+  labs(title='Permutation Test Distribution',
+       subtitle='Keyword: Trump',
+       x = "Cosine Similarity",
+       y = 'Count') +
   theme_bw()
