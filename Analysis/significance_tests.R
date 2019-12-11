@@ -14,6 +14,7 @@ agreesim <- read.csv('Analysis/agreeword_similarity.csv')
 keysim <- read.csv('Analysis/keyword_relative_similarity.csv')
 basesim <- read.csv('Analysis/baseword_relative_similarity.csv')
 agreesim <- read.csv('Analysis/agreeword_relative_similarity.csv')
+
 agreesim$label <- 'Agree'
 basesim$label <- 'Base'
 keysim$label <- 'Disagree'

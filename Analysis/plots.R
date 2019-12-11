@@ -3,19 +3,27 @@ library(ggplot2)
 library(tidyr)
 setwd("/home/mike/Desktop/Word Embeddings")
 
-# Read in data
-# still need to subset to data after date
+################################
+# Data Import and Manipulation
+###############################
+# Raw text
 text <- read.csv('Data/aggregated_tweets.csv')
+# Congress members meta data
 meta <- read.csv('Meta Data/meta_data.csv')
+# Join text and meta data
+tweets <- left_join(text, meta, by = 'user_id')
+rm(text, meta)
+# Cosine similarity results
 keysim <- read.csv('Analysis/keyword_similarity.csv')
 basesim <- read.csv('Analysis/baseword_similarity.csv')
 agreesim <- read.csv('Analysis/agreeword_similarity.csv')
-tweets <- left_join(text, meta, by = 'user_id')
+# Single word permutation data
 perm <- read.csv('Analysis/permutation.csv')
-rm(text, meta)
 
-# subset and reformat tweets
+# subset tweets based on date created and party affiliation
 tweets <- tweets[tweets$party == 'R' | tweets$party == 'D',]
+tweets$created <- as.Date(as.character(tweets$created))
+tweets <- tweets[tweets$created >= as.Date('2019-11-06'),]
 ggtweets <- count(tweets, party)
 
 # combine cosine data into single df
@@ -24,6 +32,9 @@ basesim$label <- 'Base'
 keysim$label <- 'Disagree'
 cosim <- bind_rows(keysim, agreesim, basesim)
 
+############
+# Plots
+############
 # distribution of tweets by party
 ggplot(data=ggtweets, aes(x=party, y=n, fill=party)) +
   geom_bar(stat="identity", position=position_dodge(), colour="black", size = .3) +
@@ -32,7 +43,9 @@ ggplot(data=ggtweets, aes(x=party, y=n, fill=party)) +
   geom_text(aes(label=n), vjust=-.3, color="black", size=4.5)+
   theme_classic()
 
-# Density plot for t-test
+ggsave("Analysis/tweetcount.png", device = "png")
+
+# Density plot of cosine similarity
 ggplot(data = cosim, aes(similarity)) + geom_density(aes(fill=factor(label)), alpha=0.8) + 
   labs(title="Distribution: Density Plot", 
        subtitle="Cosine Similarity Grouped by Category",
@@ -40,13 +53,14 @@ ggplot(data = cosim, aes(similarity)) + geom_density(aes(fill=factor(label)), al
        y="Density",
        fill="Word Category")
 
-  # box plot for t-test
+ggsave("Analysis/density.png", device = "png")
+
+# Box plot of cosine similarity
 cosimsum <- cosim %>% 
   group_by(label) %>%
   summarise(Mean = mean(similarity), Max = max(similarity), Min = min(similarity))
 
 box <- ggplot(data = cosim, aes(label, similarity))
-
 box + geom_boxplot() + 
   geom_dotplot(binaxis='y', 
                stackdir='center', 
@@ -59,7 +73,9 @@ box + geom_boxplot() +
        y="Cosine Similarity") +
   theme_bw()
 
-# histogram
+ggsave("Analysis/boxplot.png", device = "png")
+
+# Histogram of single word permutation
 
 ggplot(perm, aes(x=cosine.similarity)) + 
   geom_histogram(fill = '#0072B2') +
@@ -68,3 +84,5 @@ ggplot(perm, aes(x=cosine.similarity)) +
        x = "Cosine Similarity",
        y = 'Count') +
   theme_bw()
+
+ggsave("Analysis/permutation.png", device = "png")
