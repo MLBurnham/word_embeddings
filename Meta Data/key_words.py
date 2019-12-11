@@ -256,8 +256,6 @@ base_words = [
     'go','get',
     
     'hear', 'help', 'host', 'hold',
-    
-    'infrastructure',
 
     'join', 
 
@@ -274,8 +272,8 @@ base_words = [
     'read', 'receive', 'recent',
     
     'sure', 'send', 'share', 'small', 'staff', 'shut',
-
-    'thanksgiving', 'thank', 'think', 'take', 'today', 'talk',
+    
+    'thank', 'think', 'take', 'today', 'talk',
     
     'veteran',
 
@@ -319,7 +317,6 @@ base_synonyms = {
     'little': 'small',
     'miniture': 'small',
     'mini': 'small',
-    'thanks giving': 'thanksgiving',
     'grateful': 'thank',
     'thanks': 'thank',
     'gratitude': 'thank',
