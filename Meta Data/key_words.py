@@ -131,8 +131,6 @@ key_words_small = [
 
     'tax', 'trump',
 
-    'usmca',
-
     'wall', 'wealth', 'welfare', 'whitehouse',
 ]
 
@@ -233,7 +231,6 @@ key_synonyms = {
     'make america great again': 'maga',
     'fossil fuels': 'oil',
     'fossil fuel': 'oil',
-    'united states mexicocanada agreement': 'usmca',
     'collude': 'collusion',
     'cops': 'police',
     'law enforcement': 'police',
@@ -244,8 +241,8 @@ base_words = [
     'answer', 'annual', 'able',
     
     'bring', 
-
-    'cancer', 'come', 'chance',
+    
+    'come', 'chance',
     
     'day',
     
@@ -274,8 +271,6 @@ base_words = [
     'sure', 'send', 'share', 'small', 'staff', 'shut',
     
     'thank', 'think', 'take', 'today', 'talk',
-    
-    'veteran',
 
     'weekend', 'week',
     
@@ -341,6 +336,8 @@ agree_words = [
     
     'terrorism',
     
+    'usmca',
+    
     'veteran',
 ]
 
@@ -356,6 +353,8 @@ agree_synonyms = {
     
     'terror attack': 'terrorism',
     'terrorist': 'terrorism',
+    
+    'united states mexico canada agreement': 'usmca',
     
     'vets': 'veteran',
     'vet': 'veteran'

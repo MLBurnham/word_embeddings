@@ -1,13 +1,13 @@
 # Measuring ideology via word embeddings
 This project is exploring the use of word embeddings to measure ideology.
-For my test case I'm using twitter data from US congress members as well as the Russian Troll Tweet Dataset found here: https://github.com/fivethirtyeight/russian-troll-tweets
+For my test case I'm using twitter data from US congress members. For future experiments I aim to test on the Russian twitter troll data set. 
 
 ## To do:
 0. Configure environment
 
     - [x] Init git repo
     - [x] Init remote repo
-    - [ ] Set up virtual env
+    - [x] Set up virtual env
     - [x] Create README.md
     - [ ] Ensure reproducability of scripts
     
@@ -61,7 +61,7 @@ For my test case I'm using twitter data from US congress members as well as the 
     - [x] Create list of words where I expect no ideological difference
     - [x] Add twitter handles for names in synonym list
     - [x] Cull list of key words to about 50 
-    - [ ] Test lemmatizer on base words
+    - [x] Test lemmatizer on base words
     - [x] Make sure base words aren't in stop words list
 
 7. Construct word embeddings
@@ -70,9 +70,9 @@ For my test case I'm using twitter data from US congress members as well as the 
     - [x] PCA and create pca to df function
     - [x] Create plot for pca
     - [x] Test run on 'trump' and 'impeach'
-    - [ ] Automate process so I can loop through embeddings for each key word
+    - [x] Automate process so I can loop through embeddings for each key word
     - [ ] Find platform to save embeddings on
-    - [ ] Congressional word embeddings
+    - [x] Congressional word embeddings
     - [ ] Troll word embeddings
     - [x] test skipgram vs cbow
 
@@ -83,8 +83,10 @@ For my test case I'm using twitter data from US congress members as well as the 
 9. Explore results
     - [x] Calculate cosine similarity on key terms
     - [x] Visualize distance via PCA or SVD
-    - [ ] Descriptive statistics and plots of dataset and analysis. bar char, dumbbell plot, 3d scatter
-    - [ ] Implement permutation testing
+    - [x] Descriptive statistics and plots of dataset and analysis. bar char, dumbbell plot, 3d scatter
+    - [x] Implement permutation testing for single word
+    - [x] t-test, bootstrap, and permutation tests
+    - [ ] re-run tests for relative cosine similarity
 
 10. Test fightnin words process
 
@@ -104,4 +106,5 @@ For my test case I'm using twitter data from US congress members as well as the 
 - word2vec explained: https://arxiv.org/pdf/1402.3722.pdf
 - Diachronic word embeddings: https://arxiv.org/pdf/1605.09096.pdf
 - Words are Malleable: https://arxiv.org/pdf/1711.05603.pdf
+- Relative Cosine Similarity: https://ufal.mff.cuni.cz/pbml/105/art-leeuwenberg-et-al.pdf
 

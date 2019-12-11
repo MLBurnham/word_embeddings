@@ -5,9 +5,15 @@ library(dplyr)
 library(simpleboot)
 library(boot)
 # import data
+## Cosine similarity data
 keysim <- read.csv('Analysis/keyword_similarity.csv')
 basesim <- read.csv('Analysis/baseword_similarity.csv')
 agreesim <- read.csv('Analysis/agreeword_similarity.csv')
+
+## Relative cosine similarity data
+keysim <- read.csv('Analysis/keyword_relative_similarity.csv')
+basesim <- read.csv('Analysis/baseword_relative_similarity.csv')
+agreesim <- read.csv('Analysis/agreeword_relative_similarity.csv')
 agreesim$label <- 'Agree'
 basesim$label <- 'Base'
 keysim$label <- 'Disagree'
@@ -29,11 +35,11 @@ permTS(keybase$similarity ~ keybase$label, alternative = 'two.sided', method = '
 # disagree words with agree words
 agreeboot <- two.boot(keysim$similarity, agreesim$similarity, mean, 1000, na.rm = TRUE)
 boot.ci(agreeboot, type = 'perc')
-mean(abs(agreeboot$t) > abs(agreeboot$t0))
+
 # disagree words with base words
 baseboot <- two.boot(keysim$similarity, basesim$similarity, mean, 1000, na.rm = TRUE)
 boot.ci(baseboot, type = 'perc')
-mean(abs(baseboot$t) > abs(baseboot$t0))
+
 
 # descriptive stats
 mean(agreesim$similarity)
