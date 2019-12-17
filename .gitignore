@@ -1,5 +1,6 @@
 keys.py
 Readings/
+raw_data/
 __pycache__
 .ipynb_checkpoints
 .~lock*

@@ -1,7 +1,6 @@
 import spacy
 import re
 
-
 class TextPrep:
     """
     Class for either tokenizing or lemmatizing a corpus of documents

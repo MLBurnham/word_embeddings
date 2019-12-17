@@ -22,7 +22,7 @@ For my test case I'm using twitter data from US congress members. For future exp
 
     - [x] Fields: screen name, user id, about, 
     - [x] Manually add: party, gender, district
-    - [ ] Convert meta data notebook to .py script
+    - [ ] Convert notebooks to .py script where appropriate
 
 3. Create listener to stream data
     - [x] Filter for original tweets
@@ -86,7 +86,7 @@ For my test case I'm using twitter data from US congress members. For future exp
     - [x] Descriptive statistics and plots of dataset and analysis. bar char, dumbbell plot, 3d scatter
     - [x] Implement permutation testing for single word
     - [x] t-test, bootstrap, and permutation tests
-    - [ ] re-run tests for relative cosine similarity
+    - [x] re-run tests for relative cosine similarity
 
 10. Test fightnin words process
 

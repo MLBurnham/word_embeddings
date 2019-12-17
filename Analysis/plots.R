@@ -1,29 +1,24 @@
+# libraries
 library(dplyr)
 library(ggplot2)
 library(tidyr)
-setwd("/home/mike/Desktop/Word Embeddings")
+
 
 ################################
 # Data Import and Manipulation
 ###############################
 # Raw text
-text <- read.csv('Data/aggregated_tweets.csv')
-# Congress members meta data
-meta <- read.csv('Meta Data/meta_data.csv')
-# Join text and meta data
-tweets <- left_join(text, meta, by = 'user_id')
-rm(text, meta)
+text <- read.csv('Data/replication_text.csv')
+
 # Cosine similarity results
 keysim <- read.csv('Analysis/keyword_similarity.csv')
 basesim <- read.csv('Analysis/baseword_similarity.csv')
 agreesim <- read.csv('Analysis/agreeword_similarity.csv')
+
 # Single word permutation data
 perm <- read.csv('Analysis/permutation.csv')
 
-# subset tweets based on date created and party affiliation
-tweets <- tweets[tweets$party == 'R' | tweets$party == 'D',]
-tweets$created <- as.Date(as.character(tweets$created))
-tweets <- tweets[tweets$created >= as.Date('2019-11-06'),]
+# generate tweet count table
 ggtweets <- count(tweets, party)
 
 # combine cosine data into single df
