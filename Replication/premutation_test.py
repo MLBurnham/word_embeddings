@@ -22,8 +22,8 @@ import random
 from TextPrep import TextPrep
 from get_cosine import cosine_sim
 
-os.chdir('../Meta Data')
-from key_words import key_words, key_synonyms
+os.chdir('./Meta Data')
+from key_words import key_words, key_synonyms, agree_words, agree_synonyms, base_words, base_synonyms
 from stop_words import stop_words
 os.chdir('..')
 
@@ -56,7 +56,7 @@ tweets = [keyprep.twitter_preprocess(tweet) for tweet in tweets]
 sim = []
 for i in range(permutations):
     # permute the labels
-    rlabels = random.sample(list(plabels), len(plabels))
+    rlabels = random.sample(list(labels), len(labels))
     # Get cosine similarity
     rcosine = cosine_sim(parser = prep, keyword = 'trump', text = tweets, labels = rlabels, threads = n_threads)
     # append to list
@@ -70,9 +70,9 @@ simdf.to_csv('permutation.csv', index = False)
 relsim = []
 for i in range(permutations):
     # permute the labels
-    rlabels = random.sample(list(plabels), len(plabels))
+    rlabels = random.sample(list(labels), len(labels))
     # Get cosine similarity
-    rcosine = cosine_sim(parser = prep, keyword = 'trump', text = tweets, labels = rlabels, relative = True, threads = n_threads)
+    rcosine = cosine_sim(parser = keyprep, keyword = 'trump', text = tweets, labels = rlabels, relative = True, threads = n_threads)
     # append to list
     relsim.append(rcosine)
 
