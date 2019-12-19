@@ -13,13 +13,15 @@
 \usepackage{subfiles}
 \usepackage{graphicx}
 \usepackage{floatrow}
+\usepackage{subfigure}
+\usepackage{amssymb}
 
 \graphicspath{ {./images/} }
 
 
 \usepackage{lipsum}
 
-\title{A title about word embeddings}
+\title{Leveraging Word Embeddings for Social Inference}
 
 
 \author{
@@ -27,7 +29,6 @@
   Department of Political Science\\
   Penn State University\\
   \texttt{mlb6496@psu.edu} \\
-  %% examples of more authors
 }
 
 \begin{document}
@@ -57,66 +58,9 @@
 \label{sec:results}
 \subfile{sections/results}
 
-
-
-The documentation for \verb+natbib+ may be found at
-\begin{center}
-  \url{http://mirrors.ctan.org/macros/latex/contrib/natbib/natnotes.pdf}
-\end{center}
-Of note is the command \verb+\citet+, which produces citations
-appropriate for use in inline text.  For example,
-\begin{verbatim}
-   \citet{hasselmo} investigated\dots
-\end{verbatim}
-produces
-\begin{quote}
-  Hasselmo, et al.\ (1995) investigated\dots
-\end{quote}
-
-\begin{center}
-  \url{https://www.ctan.org/pkg/booktabs}
-\end{center}
-
-
-\subsection{Figures}
-\lipsum[10] 
-See Figure \ref{fig:fig1}. Here is how you add footnotes. \footnote{Sample of the first footnote.}
-\lipsum[11] 
-
-\begin{figure}
-  \centering
-  \fbox{\rule[-.5cm]{4cm}{4cm} \rule[-.5cm]{4cm}{0cm}}
-  \caption{Sample figure caption.}
-  \label{fig:fig1}
-\end{figure}
-
-\subsection{Tables}
-\lipsum[12]
-See awesome Table~\ref{tab:table}.
-
-\begin{table}
- \caption{Sample table title}
-  \centering
-  \begin{tabular}{lll}
-    \toprule
-    \multicolumn{2}{c}{Part}                   \\
-    \cmidrule(r){1-2}
-    Name     & Description     & Size ($\mu$m) \\
-    \midrule
-    Dendrite & Input terminal  & $\sim$100     \\
-    Axon     & Output terminal & $\sim$10      \\
-    Soma     & Cell body       & up to $10^6$  \\
-    \bottomrule
-  \end{tabular}
-  \label{tab:table}
-\end{table}
-
-\subsection{Lists}
-\begin{itemize}
-\item Lorem ipsum dolor sit amet
-\item consectetur adipiscing elit. 
-\item Aliquam dignissim blandit est, in dictum tortor gravida eget. In ac rutrum magna.
-\end{itemize}
+\section{Discussion}
+\label{sec:discussion}
+\subfile{sections/discussion}
 
 
 \bibliographystyle{apalike}  
@@ -125,5 +69,8 @@ See awesome Table~\ref{tab:table}.
 
 
 %%% Comment out this section when you \bibliography{references} is enabled.
+
+\appendix
+\subfile{sections/appendix}
 
 \end{document}

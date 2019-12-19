@@ -36,18 +36,17 @@ In conjunction with the text from congress members, I compiled a list of ideolog
 \begin{table}[h]
  \caption{Key words by category}
   \centering
-  \begin{tabular}{ll}
+  \begin{tabular}{lll}
     \toprule
-    Category      & \textit{n}\\
+    Category      & \textit{n} & Examples\\
     \midrule
-    Disagree  &   29\\
-    Agree     &   10\\
-    Base      &   47\\
+    Disagree      &   29       & trump, abortion, gun\\
+    Agree         &   10       & veteran, isis, infrastructure\\
+    Base          &   47       & answer, opportunity, member\\
     \bottomrule
   \end{tabular}
   \label{tab:table}
 \end{table}
-
 
 \subsection{Pre-processing and cleaning}
 To clean the text I removed websites, emoji, punctuation, and digits via regular expressions. I used spaCy’s language model to tokenize, lemmatize, and remove stop words from the text \cite{honnibal-johnson:2015:EMNLP}. The stop words removed consist of spaCy’s default list with minor alterations to accommodate for specifics in the data set. For example, the word ‘make’ was removed from the list because of its significance to the phrase ‘make America great again.’ A list of stop words is located in the appendix.

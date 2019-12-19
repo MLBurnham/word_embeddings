@@ -8,80 +8,110 @@ library(boot)
 # import  and clean data
 ##########################
 
-# Cosine similarity data
-keysim <- read.csv('Analysis/keyword_similarity.csv')
-basesim <- read.csv('Analysis/baseword_similarity.csv')
-agreesim <- read.csv('Analysis/agreeword_similarity.csv')
+sim <- read.csv('Data/word_similarities.csv')
+rcs <- select(sim, -similarity)
+cs <- select(sim, -relative_similarity)
+rm(sim)
 
-# Relative cosine similarity data
-keyrelsim <- read.csv('Analysis/keyword_relative_similarity.csv')
-baserelsim <- read.csv('Analysis/baseword_relative_similarity.csv')
-agreerelsim <- read.csv('Analysis/agreeword_relative_similarity.csv')
-
-# Cosine similarity Label data    
-agreesim$label <- 'Agree'
-basesim$label <- 'Base'
-keysim$label <- 'Disagree'
-cosim <- bind_rows(keysim, agreesim, basesim)
-
-# Relative Cosine similarity Label data    
-agreerelsim$label <- 'Agree'
-baserelsim$label <- 'Base'
-keyrelsim$label <- 'Disagree'
-relsim <- bind_rows(keyrelsim, abreerelsim, baserelsim)
-
-##########################
-# Significance tests
-##########################
+######################################
+# Significance tests for hypothesis 3
+######################################
 # t-tests cosine sim
-t.test(keysim$similarity, basesim$similarity)
-t.test(keysim$similarity, agreesim$similarity)
+t.test(cs[cs$label == 'disagree',]$similarity, cs[cs$label == 'agree',]$similarity)
+t.test(cs[cs$label == 'disagree',]$similarity, cs[cs$label == 'base',]$similarity)
 
 # t-tests relative cosine sim
-t.test(keyrelsim$similarity, baserelsim$similarity)
-t.test(keyrelsim$similarity, agreerelsim$similarity)
+t.test(rcs[rcs$label == 'disagree',]$relative_similarity, rcs[rcs$label == 'agree',]$relative_similarity)
+t.test(rcs[rcs$label == 'disagree',]$relative_similarity, rcs[rcs$label == 'base',]$relative_similarity)
 
-# permutation tests agree and disagree words
-keyagree <- bind_rows(keysim, agreesim)
+# permutation tests cosine sim
+keyagree <- cs[cs$label == 'disagree' | cs$label == 'agree',]
 permTS(keyagree$similarity ~ keyagree$label, alternative = 'two.sided', method = 'exact.mc')
 
-relkeyagree <- bind_rows(keyrelsim, agreerelsim)
-permTS(relkeyagree$similarity ~ relkeyagree$label, alternative = 'two.sided', method = 'exact.mc')
-
-# Permutation tests disagree and base words
-keybase <- bind_rows(keysim, basesim)
+keybase <- cs[cs$label == 'disagree' | cs$label == 'base',]
 permTS(keybase$similarity ~ keybase$label, alternative = 'two.sided', method = 'exact.mc')
 
-relkeybase <- bind_rows(keyrelsim, baserelsim)
-permTS(keyrelbase$similarity ~ keyrelbase$label, alternative = 'two.sided', method = 'exact.mc')
+# Permutation tests relative cosine sim
+relkeyagree <- rcs[rcs$label == 'disagree' | rcs$label == 'agree',]
+permTS(relkeyagree$relative_similarity ~ relkeyagree$label, alternative = 'two.sided', method = 'exact.mc')
 
-# Bootstrap disagree words with agree words
-agreeboot <- two.boot(keysim$similarity, agreesim$similarity, mean, 1000, na.rm = TRUE)
+relkeybase <- rcs[rcs$label == 'disagree' | rcs$label == 'base',]
+permTS(relkeybase$relative_similarity ~ relkeybase$label, alternative = 'two.sided', method = 'exact.mc')
+
+# Bootstrap tests cosine sim
+agreeboot <- two.boot(cs[cs$label == 'disagree',]$similarity, cs[cs$label == 'agree',]$similarity, mean, 1000, na.rm = TRUE)
 boot.ci(agreeboot, type = 'perc')
 
-relagreeboot <- two.boot(keyrelsim$similarity, agreerelsim$similarity, mean, 1000, na.rm = TRUE)
-boot.ci(relagreeboot, type = 'perc')
-
-# Bootstrap disagree words with base words
-baseboot <- two.boot(keysim$similarity, basesim$similarity, mean, 1000, na.rm = TRUE)
+baseboot <- two.boot(cs[cs$label == 'disagree',]$similarity, cs[cs$label == 'base',]$similarity, mean, 1000, na.rm = TRUE)
 boot.ci(baseboot, type = 'perc')
 
-relbaseboot <- two.boot(keyrelsim$similarity, baserelsim$similarity, mean, 1000, na.rm = TRUE)
+# Bootstrap tests relative cosine sim
+relagreeboot <- two.boot(rcs[rcs$label == 'disagree',]$relative_similarity, rcs[rcs$label == 'agree',]$relative_similarity, mean, 1000, na.rm = TRUE)
+boot.ci(relagreeboot, type = 'perc')
+
+relbaseboot <- two.boot(rcs[rcs$label == 'disagree',]$relative_similarity, rcs[rcs$label == 'base',]$relative_similarity, mean, 1000, na.rm = TRUE)
 boot.ci(relbaseboot, type = 'perc')
 
+##########################################
+# Descriptive Statistics for hypothesis 3
+##########################################
+# cosine similarity
+mean(cs[cs$label == 'agree',]$similarity)
+mean(cs[cs$label == 'disagree',]$similarity)
+mean(cs[cs$label == 'base',]$similarity)
 
-##########################
-# Descriptive Statistics
-##########################
-mean(agreesim$similarity)
-mean(keysim$similarity)
-mean(basesim$similarity)
-min(basesim$similarity)
-min(agreesim$similarity)
-min(keysim$similarity)
-max(keysim$similarity)
-max(agreesim$similarity)
-max(basesim$similarity)
-length(keysim$similarity)
-length(agreesim$similarity)
-length(basesim$similarity)
+min(cs[cs$label == 'agree',]$similarity)
+min(cs[cs$label == 'disagree',]$similarity)
+min(cs[cs$label == 'base',]$similarity)
+
+max(cs[cs$label == 'agree',]$similarity)
+max(cs[cs$label == 'disagree',]$similarity)
+max(cs[cs$label == 'base',]$similarity)
+
+sd(cs[cs$label == 'agree',]$similarity)
+sd(cs[cs$label == 'disagree',]$similarity)
+sd(cs[cs$label == 'base',]$similarity)
+
+length(cs[cs$label == 'agree',]$similarity)
+length(cs[cs$label == 'disagree',]$similarity)
+length(cs[cs$label == 'base',]$similarity)
+
+# Relative cosine similarity
+mean(rcs[rcs$label == 'agree',]$relative_similarity)
+mean(rcs[rcs$label == 'disagree',]$relative_similarity)
+mean(rcs[rcs$label == 'base',]$relative_similarity)
+
+min(rcs[rcs$label == 'agree',]$relative_similarity)
+min(rcs[rcs$label == 'disagree',]$relative_similarity)
+min(rcs[rcs$label == 'base',]$relative_similarity)
+
+max(rcs[rcs$label == 'agree',]$relative_similarity)
+max(rcs[rcs$label == 'disagree',]$relative_similarity)
+max(rcs[rcs$label == 'base',]$relative_similarity)
+
+sd(rcs[rcs$label == 'agree',]$relative_similarity)
+sd(rcs[rcs$label == 'disagree',]$relative_similarity)
+sd(rcs[rcs$label == 'base',]$relative_similarity)
+
+length(rcs[rcs$label == 'agree',]$relative_similarity)
+length(rcs[rcs$label == 'disagree',]$relative_similarity)
+length(rcs[rcs$label == 'base',]$relative_similarity)
+
+##########################################
+# Descriptive Statistics for hypothesis 2
+##########################################
+mean(placeperm$cosine.similarity)
+mean(trumpperm$cosine.similarity)
+mean(usmcaperm$cosine.similarity)
+
+min(placeperm$cosine.similarity)
+min(trumpperm$cosine.similarity)
+min(usmcaperm$cosine.similarity)
+
+max(placeperm$cosine.similarity)
+max(trumpperm$cosine.similarity)
+max(usmcaperm$cosine.similarity)
+
+sd(placeperm$cosine.similarity)
+sd(trumpperm$cosine.similarity)
+sd(usmcaperm$cosine.similarity)

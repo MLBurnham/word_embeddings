@@ -1,0 +1,15 @@
+\documentclass[../embeddings.tex]{subfiles}
+ 
+\begin{document}
+I provided some preliminary insights on how word embeddings can be more effectively used in social science. While their validity as a language model is well established via their predictive capabilities, further research is needed on how to leverage them for inferential purposes. On descriptive tasks, embeddings appear to offer clear and predictable insights. On quantitative position estimates, results are less conclusive. Relative cosine similarity appears to offer more robust results than simple cosine similarity, but further testing is warranted. To advance this research further I propose the following: 
+\begin{enumerate}
+    \item Further testing on larger data sets. Quantity matters for constructing good embeddings and larger data sets will allow for testing on more words with more frequent use.
+    \item Testing with a more finely curated list of key words. Words for this study were largely selected based on perceived political divisions. I did not verify if those divisions were actually manifest within the text a priori. A more robust experiment would test word embeddings against positions confirmed to be established in text – potentially via human coders.
+    \item Comparison of results against already established methods. This study tested the use of embeddings within a single vector space. Future research should test results against the techniques mentioned earlier that compare across vector space via procrustes analysis. Additionally, testing against established bag-of-words methods should be done as well. 
+    \item More exploration should be done on teasing out additional dimensions of disagreement. Disagreement can occur along the dimensions of conceptualization or sentiment. Do groups or idnividuals disagree because they understand a concept differently, or do they disagree because they have different feelings about the concept even though they understand it similarly? Word embeddings potentially contain all of this information, but cosine similarity alone does not distinguish between these dimensions.  
+\end{enumerate}
+Future research can focus on developing these four areas, but work is also needed in making tools available to researchers. The available libraries for implementing word embeddings are highly developed and well established, but few are geared towards inferential tasks. A generalized framework more suited to the tasks of social scientists would be a significant contribution in accelerating research on this topic.
+
+
+
+\end{document}

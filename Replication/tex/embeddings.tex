@@ -1,0 +1,76 @@
+\documentclass{article}
+
+
+\usepackage{arxiv}
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{subfiles}
+\usepackage{graphicx}
+\usepackage{floatrow}
+\usepackage{subfigure}
+\usepackage{amssymb}
+
+\graphicspath{ {./images/} }
+
+
+\usepackage{lipsum}
+
+\title{Leveraging Word Embeddings for Social Inference}
+
+
+\author{
+  Mike Burnham \\
+  Department of Political Science\\
+  Penn State University\\
+  \texttt{mlb6496@psu.edu} \\
+}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\subfile{sections/abstract}
+\end{abstract}
+
+%\keywords{First keyword \and Second keyword \and More}
+
+
+\section{Introduction}
+\subfile{sections/introduction}
+
+
+\section{Literature Review}
+\label{sec:litreview}
+\subfile{sections/litreview}
+
+
+\section{Research Goals and Design}
+\label{sec:design}
+\subfile{sections/design}
+
+\section{Results}
+\label{sec:results}
+\subfile{sections/results}
+
+\section{Discussion}
+\label{sec:discussion}
+\subfile{sections/discussion}
+
+
+\bibliographystyle{apalike}  
+\bibliography{references}  %%% Remove comment to use the external .bib file (using bibtex).
+%%% and comment out the ``thebibliography'' section.
+
+
+%%% Comment out this section when you \bibliography{references} is enabled.
+
+\appendix
+\subfile{sections/appendix}
+
+\end{document}
