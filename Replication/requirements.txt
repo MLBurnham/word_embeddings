@@ -65,7 +65,7 @@ preshed==3.0.2
 prometheus-client==0.7.1
 prompt-toolkit==3.0.2
 ptyprocess==0.6.0
-py==1.8.0
+py==1.10.0
 pycodestyle==2.5.0
 pydocstyle==4.0.1
 pyflakes==2.1.1
